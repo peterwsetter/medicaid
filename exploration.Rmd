@@ -1,0 +1,154 @@
+---
+title: "Exploration"
+output: html_notebook
+---
+
+```{r setup}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(tidyr)
+  library(ggplot2)
+  library(readr)
+  library(readxl)  
+})
+```
+
+[Medicaid Per Capita Estimates](https://www.medicaid.gov/state-overviews/scorecard/how-much-states-spend-per-medicaid-enrollee/index.html)
+
+```{r medicaid_per_capita}
+medicaid_per_capita <- read_excel('data-raw/Per-Capita-expenditure-estimates-2017-2018.xlsx') %>% 
+  filter(Year == 2017) %>% 
+  select(state = State, total_medicaid = Total, medicaid_children = Children)
+
+```
+
+[BEA Regional Price Parity](https://apps.bea.gov/regional/histdata/releases/0520rpi/index.cfm)
+
+```{r}
+rppi <- read_csv('data-raw/SARPP/SARPP_STATE_2008_2018.csv', n_max = 208) %>% 
+  filter(Description == 'RPPs: All items') %>% 
+  select(state = GeoName, rppi_2017 = `2017`)
+```
+
+[Medicaid and Chip Expendisures](https://www.medicaid.gov/medicaid/financial-management/state-expenditure-reporting-for-medicaid-chip/expenditure-reports-mbescbes/index.html)
+
+```{r chip}
+chip_file_name <- 'data-raw/FY 2017 CHIP FMR NET EXPENDITURES.xlsx'
+
+chip_sheets <- excel_sheets(chip_file_name) 
+
+chip_sheets <- chip_sheets[!grepl('20%', chip_sheets)]
+
+gsub('.* - ', '', chip_sheets[1])
+
+
+chip_spending <- chip_sheets %>% 
+  purrr::map_df(function(x) {
+    read_excel(path = chip_file_name, sheet = x,
+           skip = 6) %>% 
+    filter(!is.na(`Total Computable`)) %>% 
+    mutate(state = gsub('.* - ', '', x),
+           program = ifelse(grepl('MCHIP', x), 'MCHIP', 'CHIP')) 
+  })
+
+```
+
+[State Medicaid and CHIP Applications, Eligibility Determinations, and Enrollment Data](https://data.medicaid.gov/Enrollment/State-Medicaid-and-CHIP-Applications-Eligibility-D/n5ce-jxme)
+
+```{r chip_enrollment}
+
+
+```
+
+
+```{r medicaid_rppi_adj}
+
+medicaid_per_capita %>% 
+  inner_join(rppi,
+             by = c('state' = 'state')) %>% 
+  mutate(total_medicaid_adj = total_medicaid/rppi_2017*100,
+         medicaid_children_adj = medicaid_children/rppi_2017*100) %>% 
+  select(state, `Medicaid` = medicaid_children, `Medicaid RPP Adj` = medicaid_children_adj, `RPP 2017` = rppi_2017)  ->
+  medicaid_rppi_adj
+
+```
+
+```{r rppi_2017}
+medicaid_rppi_adj %>% 
+  ggplot(aes(state, `RPP 2017`)) +
+  geom_segment( aes(x=state, xend=state, y=0, yend=`RPP 2017`), color="grey") +
+  geom_point(size=4, alpha=0.6) +
+  theme_bw() +
+  coord_flip() +
+  scale_x_discrete(limits=rev) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.y = element_blank()
+  ) +
+  labs(title = 'Regional Pricing Power Index 2017',
+       x = NULL,
+       y = NULL)
+
+```
+
+```{r}
+medicaid_rppi_adj %>% 
+  ggplot() +
+  #geom_segment(aes(x=state, xend=state, y=`Medicaid`, yend=`Medicaid RPP Adj`)) +
+  geom_point(aes(state, `Medicaid`), size=4, alpha=0.2, color = 'purple') +
+  geom_point(aes(state, `Medicaid RPP Adj`), size=4, color = 'purple') +
+  theme_bw() +
+  coord_flip() +
+  scale_x_discrete(limits=rev) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.y = element_blank()
+  ) +
+  labs(title = 'Medicaid Spending on Children 2017',
+       x = NULL,
+       y = 'Per Capita Spending ($)')
+```
+
+```{r}
+medicaid_rppi_adj %>% 
+  ggplot() +
+  geom_segment(aes(x=state, xend=state, y=0, yend=`Medicaid`)) +
+  geom_point(aes(state, `Medicaid`), size=4, alpha=0.6, color = 'dark grey') +
+  #geom_point(aes(state, `Medicaid RPP Adj`), size=4, alpha=0.6, color = 'grey') +
+  theme_bw() +
+  coord_flip() +
+  scale_x_discrete(limits=rev) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.y = element_blank()
+  ) +
+  labs(title = 'Medicaid Spending on Children 2017',
+       x = NULL,
+       y = 'Per Capita Spending ($)')
+```
+
+
+```{r}
+medicaid_rppi_adj %>% 
+  ggplot() +
+  geom_segment(aes(x=state, xend=state, y=0, yend=`Medicaid RPP Adj`)) +
+  #geom_point(aes(state, `Medicaid`), size=4, alpha=0.6, color = 'purple') +
+  geom_point(aes(state, `Medicaid RPP Adj`), size=4, alpha=0.6, color = 'grey') +
+  theme_bw() +
+  coord_flip() +
+  scale_x_discrete(limits=rev) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks.y = element_blank()
+  ) +
+  labs(title = 'Medicaid Spending on Children 2017',
+       subtitle = 'RPP Adjusted',
+       x = NULL,
+       y = 'Per Capita Spending ($)')
+```
+
+

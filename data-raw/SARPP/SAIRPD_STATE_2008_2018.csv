@@ -1,0 +1,56 @@
+GeoFIPS,GeoName,Region,TableName,LineCode,IndustryClassification,Description,Unit,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018
+ "01000","Alabama",5,SAIRPD,1,"...","Implicit regional price deflator","Index",82.3,82.1,84.0,85.8,87.9,88.8,89.4,89.3,89.3,90.9,93.0
+ "02000","Alaska",8,SAIRPD,1,"...","Implicit regional price deflator","Index",100.4,100.3,100.7,102.9,105.2,106.2,109.2,108.6,109.7,110.8,112.9
+ "04000","Arizona",6,SAIRPD,1,"...","Implicit regional price deflator","Index",94.5,93.9,94.1,95.9,97.0,97.6,98.5,98.8,99.3,101.4,103.9
+ "05000","Arkansas",5,SAIRPD,1,"...","Implicit regional price deflator","Index",81.7,81.3,83.7,85.8,87.6,88.8,89.2,89.8,90.0,91.0,91.8
+ "06000","California",8,SAIRPD,1,"...","Implicit regional price deflator","Index",106.2,105.9,108.5,111.0,112.7,114.4,116.7,117.0,119.0,121.4,124.3
+ "08000","Colorado",7,SAIRPD,1,"...","Implicit regional price deflator","Index",94.3,94.8,96.4,99.3,101.0,103.3,104.7,105.2,105.5,107.8,109.7
+ "09000","Connecticut",1,SAIRPD,1,"...","Implicit regional price deflator","Index",103.9,103.5,104.5,106.7,109.0,109.8,111.5,111.6,111.3,112.8,114.2
+ "10000","Delaware",2,SAIRPD,1,"...","Implicit regional price deflator","Index",95.8,96.8,98.2,99.7,101.1,101.8,103.8,102.9,103.8,105.6,106.4
+ "11000","District of Columbia",2,SAIRPD,1,"...","Implicit regional price deflator","Index",108.6,109.2,112.9,115.3,117.5,118.4,121.4,120.1,118.9,122.5,125.0
+ "12000","Florida",5,SAIRPD,1,"...","Implicit regional price deflator","Index",94.7,93.8,94.6,97.2,98.9,100.4,102.1,102.4,103.8,105.8,108.3
+ "13000","Georgia",5,SAIRPD,1,"...","Implicit regional price deflator","Index",87.9,87.3,88.1,90.0,92.0,93.4,94.5,95.4,96.2,98.0,100.1
+ "15000","Hawaii",8,SAIRPD,1,"...","Implicit regional price deflator","Index",110.9,109.8,111.9,114.5,117.6,119.7,121.5,122.6,123.3,125.4,127.1
+ "16000","Idaho",7,SAIRPD,1,"...","Implicit regional price deflator","Index",89.4,88.9,89.3,91.4,93.2,94.3,96.1,96.0,95.6,97.3,99.5
+ "17000","Illinois",3,SAIRPD,1,"...","Implicit regional price deflator","Index",94.1,94.7,96.3,99.0,100.5,100.9,101.9,101.8,102.4,103.9,105.6
+ "18000","Indiana",3,SAIRPD,1,"...","Implicit regional price deflator","Index",85.7,85.7,87.3,89.8,91.2,92.4,93.3,92.7,93.1,94.7,96.2
+ "19000","Iowa",4,SAIRPD,1,"...","Implicit regional price deflator","Index",83.2,83.5,85.2,88.1,90.0,91.7,92.8,92.5,93.4,95.0,96.1
+ "20000","Kansas",4,SAIRPD,1,"...","Implicit regional price deflator","Index",83.9,84.1,85.9,88.8,90.5,92.3,93.3,92.7,93.5,95.0,96.9
+ "21000","Kentucky",5,SAIRPD,1,"...","Implicit regional price deflator","Index",83.5,83.2,84.6,86.7,88.7,90.3,90.6,91.2,90.7,92.3,94.6
+ "22000","Louisiana",5,SAIRPD,1,"...","Implicit regional price deflator","Index",85.2,85.7,87.1,89.1,91.2,92.2,93.3,93.1,93.3,94.6,96.0
+ "23000","Maine",1,SAIRPD,1,"...","Implicit regional price deflator","Index",92.0,92.0,92.5,95.3,98.2,99.6,100.7,101.9,103.1,104.5,107.7
+ "24000","Maryland",2,SAIRPD,1,"...","Implicit regional price deflator","Index",103.6,104.4,106.0,108.6,109.9,111.2,113.2,112.8,113.1,115.1,116.7
+ "25000","Massachusetts",1,SAIRPD,1,"...","Implicit regional price deflator","Index",101.7,101.3,103.1,105.5,106.4,107.9,110.1,110.6,113.2,115.1,118.1
+ "26000","Michigan",3,SAIRPD,1,"...","Implicit regional price deflator","Index",89.6,89.3,90.4,92.6,94.3,95.4,96.1,95.7,96.3,98.0,99.5
+ "27000","Minnesota",4,SAIRPD,1,"...","Implicit regional price deflator","Index",91.4,91.7,92.8,95.2,97.4,98.7,100.1,100.0,101.4,103.4,104.9
+ "28000","Mississippi",5,SAIRPD,1,"...","Implicit regional price deflator","Index",81.1,80.5,82.8,85.0,86.4,88.2,88.5,88.6,89.2,90.0,92.6
+ "29000","Missouri",4,SAIRPD,1,"...","Implicit regional price deflator","Index",82.5,82.4,84.3,87.2,89.2,91.0,92.2,92.1,92.9,94.5,95.6
+ "30000","Montana",7,SAIRPD,1,"...","Implicit regional price deflator","Index",89.5,88.6,89.7,91.8,93.4,95.7,97.2,97.8,96.9,99.1,100.4
+ "31000","Nebraska",4,SAIRPD,1,"...","Implicit regional price deflator","Index",84.2,84.1,86.2,88.4,90.5,91.8,92.9,92.7,93.5,94.7,96.4
+ "32000","Nevada",8,SAIRPD,1,"...","Implicit regional price deflator","Index",94.6,94.4,95.4,97.7,98.6,99.8,100.1,100.0,99.6,101.9,104.9
+ "33000","New Hampshire",1,SAIRPD,1,"...","Implicit regional price deflator","Index",100.7,99.8,101.7,103.1,105.4,106.7,108.6,108.8,110.8,112.4,114.1
+ "34000","New Jersey",2,SAIRPD,1,"...","Implicit regional price deflator","Index",106.0,106.3,108.9,112.2,114.2,114.8,116.8,116.6,118.4,120.0,124.0
+ "35000","New Mexico",6,SAIRPD,1,"...","Implicit regional price deflator","Index",88.7,88.6,90.4,93.3,94.9,96.4,97.3,96.5,95.9,97.5,98.1
+ "36000","New York",2,SAIRPD,1,"...","Implicit regional price deflator","Index",108.1,108.2,110.1,112.8,115.2,116.5,118.8,119.1,120.7,122.5,125.3
+ "37000","North Carolina",5,SAIRPD,1,"...","Implicit regional price deflator","Index",86.4,86.4,87.2,89.5,91.5,92.9,93.8,93.8,94.7,96.7,98.9
+ "38000","North Dakota",4,SAIRPD,1,"...","Implicit regional price deflator","Index",83.1,83.5,85.2,87.9,90.8,92.8,94.1,94.6,94.8,95.4,97.5
+ "39000","Ohio",3,SAIRPD,1,"...","Implicit regional price deflator","Index",84.5,83.7,85.7,87.8,89.2,90.6,91.8,91.8,92.5,93.8,95.2
+ "40000","Oklahoma",6,SAIRPD,1,"...","Implicit regional price deflator","Index",83.5,84.0,85.6,87.7,89.8,91.0,91.9,92.4,92.0,93.5,95.1
+ "41000","Oregon",8,SAIRPD,1,"...","Implicit regional price deflator","Index",92.3,92.8,94.1,96.5,98.5,100.1,101.5,101.3,104.2,106.1,108.8
+ "42000","Pennsylvania",2,SAIRPD,1,"...","Implicit regional price deflator","Index",92.2,92.1,94.1,96.3,98.3,99.8,100.8,101.0,101.8,103.0,105.0
+ "44000","Rhode Island",1,SAIRPD,1,"...","Implicit regional price deflator","Index",94.1,93.8,94.7,97.3,98.6,99.9,102.5,102.7,104.4,104.7,106.9
+ "45000","South Carolina",5,SAIRPD,1,"...","Implicit regional price deflator","Index",85.6,85.8,86.4,88.9,90.7,91.6,92.4,92.9,94.1,95.8,98.1
+ "46000","South Dakota",4,SAIRPD,1,"...","Implicit regional price deflator","Index",81.6,80.5,83.0,85.4,88.7,89.0,90.4,90.5,91.6,93.4,94.7
+ "47000","Tennessee",5,SAIRPD,1,"...","Implicit regional price deflator","Index",85.0,84.9,86.1,88.4,90.6,91.8,92.2,92.4,93.0,94.7,96.8
+ "48000","Texas",6,SAIRPD,1,"...","Implicit regional price deflator","Index",90.6,90.5,91.9,94.2,96.0,97.4,99.1,99.5,100.2,102.2,104.2
+ "49000","Utah",7,SAIRPD,1,"...","Implicit regional price deflator","Index",91.0,91.7,92.5,95.2,97.0,98.8,99.4,99.2,99.7,101.3,104.1
+ "50000","Vermont",1,SAIRPD,1,"...","Implicit regional price deflator","Index",94.3,94.4,95.0,97.8,100.7,102.1,105.3,105.7,106.5,108.9,110.9
+ "51000","Virginia",5,SAIRPD,1,"...","Implicit regional price deflator","Index",96.6,97.1,98.4,100.9,102.8,104.0,105.5,105.5,106.0,107.7,109.9
+ "53000","Washington",8,SAIRPD,1,"...","Implicit regional price deflator","Index",97.0,97.3,98.4,100.7,103.3,105.4,107.7,108.2,110.1,112.7,116.1
+ "54000","West Virginia",5,SAIRPD,1,"...","Implicit regional price deflator","Index",81.7,82.1,84.4,86.7,88.4,89.6,90.6,91.2,91.1,92.1,94.5
+ "55000","Wisconsin",3,SAIRPD,1,"...","Implicit regional price deflator","Index",87.3,87.1,88.6,91.3,93.4,94.3,95.8,95.6,96.0,97.6,99.0
+ "56000","Wyoming",7,SAIRPD,1,"...","Implicit regional price deflator","Index",90.3,90.1,91.6,94.7,95.6,97.1,99.4,99.1,99.5,99.7,99.9
+"Note: See the included footnote file."
+"SAIRPD: Implicit Price Deflators by state "
+"Last updated: May 18, 2020-- new statistics for 2018; revised statistics for 2016-2017."
+"Source: U.S. Department of Commerce / Bureau of Economic Analysis / Regional Economic Accounts"
